@@ -41,7 +41,7 @@ public class AuditTest {
 		assertEquals("Les dates d'ouverture sont différentes", "2021-04-20", audit.getDateOuverture().toString());
 		assertEquals("Les dates de clôture sont différentes", "2021-04-23", audit.getDateCloture().toString());
 		assertEquals("Les titres sont différents", "Audit pour test 8 parametres", audit.getTitre());
-		assertEquals("Le statut n'est pas le bon", StatutBase.FERME, audit.getStatut());
+		assertEquals("Le statut n'est pas le bon", StatutBase.FERME, audit.getStatutBase());
 		assertSame("Les utilisateurs ne sont pas identiques", utilisateur, audit.getAuteur());
 		assertSame("Les modeles ne sont pas identiques", modele, audit.getModele());
 		assertNull("La liste des personnes concernées n'est pas nulle", audit.getListeConcerne());
@@ -57,7 +57,7 @@ public class AuditTest {
 		assertEquals("Les dates d'ouverture sont différentes", "2021-04-29", audit.getDateOuverture().toString());
 		assertEquals("Les dates de clôture sont différentes", "2021-06-23", audit.getDateCloture().toString());
 		assertEquals("Les titres sont différents", "Audit pour test 5 parametres", audit.getTitre());
-		assertEquals("Le statut n'est pas le bon", StatutBase.FERME, audit.getStatut());
+		assertEquals("Le statut n'est pas le bon", StatutBase.FERME, audit.getStatutBase());
 	}
 
 	@Test
